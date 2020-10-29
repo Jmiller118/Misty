@@ -1,0 +1,22 @@
+{
+  "Name": "conversation.json",
+  "UniqueId": "34be90e3-e89f-424e-8243-c1d65452d908",
+  "Description": "My skill is amazing!",
+  "StartupRules": [
+    "Manual",
+    "Robot"
+  ],
+  "Language": "javascript",
+  "BroadcastMode": "verbose",
+  "TimeoutInSeconds": 600,
+  "CleanupOnCancel": true,
+  "WriteToLog": false,
+  "Parameters": {
+	  "projectId": "misty02-s9fs",
+	  "private_key_id": "cc2ca8a7a0d53fdeda5a623d98b8be0b4464659c",
+	  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCLNDdaOHnG9aJu\n7wvZ1GyabE4Pf7ZjaXLXLXQgdtKQEkDqdwHdWsD4KUyMgb2Qxg+LD9NZV7esNFNb\n3ZT5qnPAbfpVGlYYU+MT8mUKoTpbI1bYDTksOSQ4qUx23vCVmvDM4HlXDSUvGa8f\nQDENutdlma3pTVGIrLVvRMLcTccrz8EWXDXMYzHpzqG5EbcVCZj1Z6+S0nNmTiPG\nDepyX2iR3n2ukQISOuH095lNN2nl3AcxzhtXSpJS+35Zg2R6OuLjzi5Da9cJ2YQ1\nUk3u8n1c+mkhO904t9NyMeLIxLrBSxJPwJ8rNCgTgTQUnlx77Ya8NC8Zj6BugKKU\nIPkRvoSLAgMBAAECggEADmCaF5/ooqOBH4W3YCFgBtez0kb7CVZ9TXsng34yQ5Ns\nZVWy+W/4/p3pXEO+1q1A3WMzjYaRSmBsfFBXpYJfioWcCt55pkaXwq97lHb62388\nENGA0QVP1+hTJPM5aazt563cP8ue8Q1Cje7n13FaSOdFU+jancv/a0VwqNIBsGUR\nnrUahVP4ciHuPvME/pHtAmkmQ3wWDEZ9ZOMlM9M9FhS4RfaI27nVkvza9lPcCM/r\nzNFAxTfOQIXrZlXTiGndeIU8xmckh+0eM8MCsTghL5s6eSpzQABGdHl5SPuer5j9\nMSrjJFPRjY9oRYvjGaIMCFQ8bl7l1BDsWldc3/FnYQKBgQC/BCe/wnuj6XzG27kr\ny+hHORx066rZvPrZ5qGVlRnRTLFaxj//KGTlrNz62mVpG+Blvz3HLpU/iZBFnKOf\n9n0lfbE8hZV0pfIYUKZwm9wRegD5sI85Iw3HzS67+RIMbol6TkuLBmE0QkUMrCrF\nkFz7DtlfCjbYOkpaqmZNVwrgKwKBgQC6j6poceEiPz0YnGkrFGyUMTDS6a4er/SB\nFSOmX+5S3CTPC+MzRp723688cVByvd6WLj09hK9EVu4Tq6Nq5XqwSslH3A8eEKl1\n4ePKQR+SPXz1hHhOl+xNXFY4eZ9RG04N2SAL9dCUnySy9FY93W7isAx6Ejvi0xej\nCACn1bhdIQKBgDgw8byAarzCP9mD44oVtuPU0iE2/pCE/kpBhUEqlmiype2tKkBW\nUrAZ1PvaaUCtWaq0wmiotHD3d8ByntO8v/3aZtwF8/xXoMs0VnID944QlN7e6JMH\nU9N18YyMbZnInpqjE6f3HXsxD3z13LM3j5KvQJSrvYyIQT1AqU2REHr3AoGAY/aO\n7J/4bg1Mg19ryrWK6GzjKGAl+DN346KcE43beXKUFozcFKGGk+mPT+e3n4O1POtR\nzSDHeOrLbqbNTX3gm423BFYZk5aB9rQvBjSW4hkoV7W/cP1elKUhXeltQFxNGoZ4\n8W+pb7lGRM0/WK7Jt5V1WgNjK0rIo4aqM0QFIYECgYB9xmpFaekcsujQsg01h5yu\nAzD0UYQ5iZsaB6GPbwVv09MBVxUPeMO7ib0Hnwfv6UDd/un5NCBFaTw0vhGggwcT\nQbxG6vCgTU1NxjfQrRTAVAAFgHa+N2y0+D5zbDpPGUNWX8TwFrGNIyrTeAmPdjiz\na7js95tIIRVRsC6qAt6FiA==\n-----END PRIVATE KEY-----\n",
+	  "client_email": "dialogflow-ltxthn@misty02-s9fs.iam.gserviceaccount.com", 
+	  "scopes" : "https://www.googleapis.com/auth/cloud-platform"
+
+}
+}
