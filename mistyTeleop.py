@@ -64,47 +64,48 @@ def hazard_revert_to_defaults():
 def hazard_tof_off():
     cp_misty.update_hazard_system(False, True, False)
 
-def arm_up():
-    global position
-    position = max(position - 5, -29)
-    cp_misty.move_arms("both", position, 30)
 
-def arm_down():
-    global position
-    position = min(position + 5, 90)
-    cp_misty.move_arms("both", position, 30)
-
-def neutral_arm():
-    #global position
-    #position = 0
-    cp_misty.move_arms("both", 0, 30)
-
-def led_red():
-    cp_misty.change_led(255, 0, 0)
-
-def led_pink():
-    cp_misty.change_led(255, 179, 242)
-
-def led_blue():
-    cp_misty.change_led(71, 218, 255)
-
-def default_face():
-    cp_misty.display_image("e_DefaultContent.jpg")
-
-def love_face():
-    cp_misty.display_image("e_Love.jpg")
-
-def sad_face():
-    cp_misty.display_image("e_Sadness.jpg")
-
-def joy2_face():
-    cp_misty.display_image("e_Joy2.jpg")
-
-def admiration_face():
-    cp_misty.display_image("e_Admiration.jpg")
-
-def shocked_face():
-    cp_misty.display_image("e_Terror.jpg")
+def arm_up(): 
+    global position 
+    position = max(position - 5, -29) 
+    cp_misty.move_arms("both", position, 30) 
+ 
+def arm_down(): 
+    global position 
+    position = min(position + 5, 90) 
+    cp_misty.move_arms("both", position, 30) 
+ 
+def neutral_arm(): 
+    #global position 
+    #position = 0 
+    cp_misty.move_arms("both", 0, 30) 
+ 
+def led_red(): 
+    cp_misty.change_led(255, 0, 0) 
+ 
+def led_pink(): 
+    cp_misty.change_led(255, 179, 242) 
+ 
+def led_blue(): 
+    cp_misty.change_led(71, 218, 255) 
+ 
+def default_face(): 
+    cp_misty.display_image("e_DefaultContent.jpg") 
+ 
+def love_face(): 
+    cp_misty.display_image("e_Love.jpg") 
+ 
+def sad_face(): 
+    cp_misty.display_image("e_Sadness.jpg") 
+ 
+def joy2_face(): 
+    cp_misty.display_image("e_Joy2.jpg") 
+ 
+def admiration_face(): 
+    cp_misty.display_image("e_Admiration.jpg") 
+ 
+def shocked_face(): 
+    cp_misty.display_image("e_Terror.jpg") 
 
 def mad_face():
     cp_misty.display_image("e_Aggressiveness.jpg")
@@ -136,11 +137,16 @@ def grr():
 def waa():
     cp_misty.play_audio("s_Fear.wav")
 
+def hmm():
+    cp_misty.play_audio("s_DisorientedConfused4.wav")
+
 def love_action():
     led_red()
     love_face()
     love()
     cp_misty.move_arms("right", -29, 30)
+    time.sleep(2)
+    default_action()
 
 def hello_action():
     cp_misty.change_led(127, 255, 0)
@@ -148,6 +154,8 @@ def hello_action():
     speak("Hello! I am Misty.")
     cp_misty.move_arms('right', -29, 40)
     cp_misty.move_head(-5, 15, "null")
+    time.sleep(2)
+    default_action()
 
 def default_action():
     default_face()
@@ -159,18 +167,24 @@ def bye_action():
     cp_misty.change_led(153, 51, 255)
     cp_misty.move_arms('left', -29, 30)
     speak("Bye Bye!")
+    time.sleep(2)
+    default_action()
 
 def laugh_action():
     joy2_face()
     cp_misty.move_head(-10, 0, "null")
     laugh()
     cp_misty.move_arms("both", -29, 30)
+    time.sleep(2)
+    default_action()
 
 def amazing_action():
     shocked_face()
     cp_misty.move_head(-10, 0, "null")
     wow()
     cp_misty.change_led(255, 255, 51)
+    time.sleep(2)
+    default_action()
 
 def sad_action():
     cp_misty.move_head(25, 0, "null")
@@ -178,19 +192,99 @@ def sad_action():
     cp_misty.move_arms("both", 45, 30)
     sad()
     cp_misty.change_led(0, 0, 255)
+    time.sleep(2)
+    default_action()
 
 def mad_action():
     mad_face()
     cp_misty.move_head(10, 0, "null")
     grr()
     led_red()
+    time.sleep(2)
+    default_action()
 
 def scared_action():
     shocked_face()
     cp_misty.move_head(-10, 0, "null")
     waa()
     cp_misty.move_arms("both", -29, 40)
-    
+    time.sleep(2)
+    default_action()
+
+def nod_action():
+    cp_misty.move_head(-10, 0, "null")
+    time.sleep(.5)
+    cp_misty.move_head(20, 0, "null")
+    time.sleep(.5)
+    cp_misty.move_head(-10, 0, "null")
+    time.sleep(.5)
+    cp_misty.move_head(20, 0, "null")
+    time.sleep(.5)
+    cp_misty.move_head(-10, 0, "null")
+    time.sleep(.5)
+    cp_misty.move_head(20, 0, "null")
+    default_action()
+
+def no_action():
+    cp_misty.move_head(0, 0, 20)
+    time.sleep(.5)
+    cp_misty.move_head(0, 0, -20)
+    time.sleep(.5)
+    cp_misty.move_head(0, 0, 20)
+    time.sleep(.5)
+    cp_misty.move_head(0, 0, -20)
+    #time.sleep(.5)
+    #cp_misty.move_head(0, 0, 20)
+    #time.sleep(.5)
+    #cp_misty.move_head(0, 0, -20)
+    time.sleep(.5)
+    default_action()
+
+def thinking_action():
+    cp_misty.move_head(0, 40, 'null')
+    cp_misty.change_led(54,163,0)
+    hmm()
+    time.sleep(4)
+    hmm()
+    time.sleep(4)
+    hmm()
+    default_action()
+
+def happy_action():
+    cp_misty.display_image("e_Joy.jpg")
+    time.sleep(2)
+    default_action()
+
+def sleepy_action():
+    cp_misty.display_image("e_Sleepy2.jpg")
+    time.sleep(2)
+    default_action()
+
+def yes():
+    speak("Yes!")
+    time.sleep(2)
+    default_action()
+
+def no():
+    speak("No!")
+    time.sleep(2)
+    default_action()
+
+def maybe():
+    speak("Maybe!")
+    time.sleep(2)
+    default_action()
+
+def nice_to_meet():
+    speak("Nice to meet you!")
+    time.sleep(2)
+    default_action()
+
+def how_are_you():
+    speak("How are you today?")
+    time.sleep(2)
+    default_action()
+
 
 def main():
 
@@ -216,6 +310,24 @@ def main():
         [sg.Button(""), sg.Button("DOWN", key = "LOOK_DOWN"), sg.Button("")]
     ]
 
+    speak_input = [
+        [sg.Text("Text to Speech")],
+        [sg.In(size=(50, 5), key="-TTS-")],
+        [sg.Button("Speak"), sg.Button("Thinking", key = "THINKING"), sg.Button("Clear")]
+    ]
+
+
+    torch_control = [
+        [sg.Text("Flashlight")],
+        [sg.Button("ON", key = "TORCH_ON"), sg.Button("OFF", key = "TORCH_OFF")]
+    ]
+
+    hazard_system_controls = [
+        [sg.Text("Default Accident Protection")],
+        [sg.Text("(Turn off only if Misty cannot drive)")],
+        [sg.Button("OFF", key = "TOF_OFF"), sg.Button("ON", key = "TOF_ON")]
+    ]
+
     led_controls = [
         [sg.Text("Change LED")],
         [sg.Button("RED", key = "LED_RED"), sg.Button("PINK", key = "LED_PINK"), sg.Button("BLUE", key = 'LED_BLUE')]
@@ -231,22 +343,6 @@ def main():
             [sg.Button("LAUGH", key = "LAUGH"), sg.Button("BYEBYE", key = 'BYEBYE'), sg.Button("JOY", key = "JOY")]
     ]
 
-    speak_input = [
-        [sg.Text("Text to Speech")],
-        [sg.In(size=(50, 5), key="-TTS-")],
-        [sg.Button("Speak"), sg.Button("Clear")]
-    ]
-
-    torch_control = [
-        [sg.Text("Flashlight")],
-        [sg.Button("ON", key = "TORCH_ON"), sg.Button("OFF", key = "TORCH_OFF")]
-    ]
-
-    hazard_system_controls = [
-        [sg.Text("Default Accident Protection")],
-        [sg.Text("(Turn off only if Misty cannot drive)")],
-        [sg.Button("OFF", key = "TOF_OFF"), sg.Button("ON", key = "TOF_ON")]
-    ]
 
     arm_controls = [
             [sg.Text("Arms Moving")],
@@ -255,18 +351,23 @@ def main():
 
     actions = [
             [sg.Text("PreSet Actions")],
-            [sg.Button("LOVE", key = 'LOVE'), sg.Button("HELLO", key='HELLO'), sg.Button("DEFAULT", key = 'DEFAULT'), sg.Button("BYE", key = "BYE"), sg.Button("LAUGH", key = 'LAUGH'), sg.Button("AMAZING", key='AMAZING'), sg.Button("SAD", key="SAD"), sg.Button("MAD", key='MAD'), sg.Button("SCARED", key='SCARED')]
+            [sg.Button("LOVE", key = 'LOVE'), sg.Button("HELLO", key='HELLO'), sg.Button("NOD", key = 'NOD'), sg.Button('SHAKE', key='SHAKE'), sg.Button('SAY YES', key = 'SAY YES'), sg.Button("MEET", key="MEET")],
+            [sg.Button("LAUGH", key = 'LAUGH'), sg.Button("AMAZING", key='AMAZING'), sg.Button("SAD", key="SAD"), sg.Button('HAPPY', key = 'HAPPY'), sg.Button('MAYBE', key = 'MAYBE'), sg.Button("HOW", key="HOW")],
+            [sg.Button("MAD", key='MAD'), sg.Button("SCARED", key='SCARED'), sg.Button("BYE", key="BYE"), sg.Button('SAY NO', key = 'NO'), sg.Button("SLEEPY", key='SLEEPY')]
     ]
+
 
     #layout = [
-    #    [sg.Column(video_feed),sg.VSeperator(), sg.Column([[sg.Column(drive_controls)],[sg.Column(head_controls)],[sg.Column(speak_input)],[sg.Column(torch_control)], [sg.Column(hazard_system_controls)],[sg.Column(arm_controls)], [sg.Column(led_controls)], [sg.Column(face_controls)]])]
+    #    [sg.Column(video_feed),sg.VSeperator(), sg.Column([[sg.Column(drive_controls)],[sg.Column(head_controls)],[sg.Column(speak_input)],[sg.Column(torch_control)], [sg.Column(hazard_system_controls)]])]
+   # ]
+
+    #layout = [
+     #   [sg.Column(video_feed),sg.VSeperator(), sg.Column([[sg.Column(actions)],[sg.Column(head_controls)],[sg.Column(speak_input)],[sg.Column(arm_controls)], [sg.Column(face_controls)]])]
     #]
-    
     layout = [
-        [sg.Column(video_feed),sg.VSeperator(), sg.Column([[sg.Column(actions)],[sg.Column(head_controls)],[sg.Column(speak_input)],[sg.Column(arm_controls)],[sg.Column(voice_controls)], [sg.Column(led_controls)], [sg.Column(face_controls)]])]
+        [sg.Column(video_feed),sg.VSeperator(), sg.Column([[sg.Column(actions)],[sg.Column(head_controls)],[sg.Column(speak_input)],[sg.Column(arm_controls)]])]
     ]
 
-    w, h = sg.Window.get_screen_size()
 
     w, h = sg.Window.get_screen_size()
     
@@ -307,7 +408,17 @@ def main():
         'AMAZING' : amazing_action,
         'SAD' : sad_action,
         'MAD' : mad_action,
-        'SCARED' : scared_action
+        'SCARED' : scared_action,
+        "NOD" : nod_action,
+        "SHAKE" : no_action,
+        "THINKING" : thinking_action,
+        "SAY YES" : yes,
+        "NO" : no,
+        "MAYBE" : maybe,
+        "SLEEPY" : sleepy_action,
+        "HAPPY" : happy_action,
+        "MEET" : nice_to_meet,
+        "HOW" : how_are_you
 
     }
 
@@ -466,11 +577,12 @@ if __name__ == "__main__":
         print("IP selected:", misty_ip_to_use)
 
     print("Please wait. Another window with the teleop interface will open in 5 seconds")
-    
+
     pitch = 0
     yaw = 0
     roll = 0
     position = 0
+
 
     cp_misty = Robot(misty_ip_to_use)
     cp_misty.enable_av_streaming_service()
