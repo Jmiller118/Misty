@@ -31,7 +31,7 @@ def look_up():
 
 def look_down():
     global pitch
-    pitch = min(pitch + 5, 25) 
+    pitch = min(pitch + 5, 15) 
     cp_misty.move_head(pitch, 0, "null")
 
 def look_left():
@@ -187,7 +187,7 @@ def amazing_action():
     default_action()
 
 def sad_action():
-    cp_misty.move_head(25, 0, "null")
+    cp_misty.move_head(15, 0, "null")
     sad_face()
     cp_misty.move_arms("both", 45, 30)
     sad()
@@ -214,15 +214,15 @@ def scared_action():
 def nod_action():
     cp_misty.move_head(-10, 0, "null")
     time.sleep(.5)
-    cp_misty.move_head(20, 0, "null")
+    cp_misty.move_head(10, 0, "null")
     time.sleep(.5)
     cp_misty.move_head(-10, 0, "null")
     time.sleep(.5)
-    cp_misty.move_head(20, 0, "null")
+    cp_misty.move_head(10, 0, "null")
     time.sleep(.5)
     cp_misty.move_head(-10, 0, "null")
     time.sleep(.5)
-    cp_misty.move_head(20, 0, "null")
+    cp_misty.move_head(10, 0, "null")
     default_action()
 
 def no_action():
