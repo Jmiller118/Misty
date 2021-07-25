@@ -349,11 +349,20 @@ def main():
             [sg.Button("DOWN", key="ARM_DOWN"), sg.Button("NEUTRAL", key="NEUTRAL_ARM"),sg.Button("UP", key="ARM_UP")]
     ]
 
+    #use for high non-verbal
+    #actions = [
+    #        [sg.Text("PreSet Actions")],
+    #        [sg.Button("LOVE", key = 'LOVE'), sg.Button("HELLO", key='HELLO'), sg.Button("NOD", key = 'NOD'), sg.Button('SHAKE', key='SHAKE'), sg.Button('SAY YES', key = 'SAY YES'), sg.Button("MEET", key="MEET")],
+    #        [sg.Button("LAUGH", key = 'LAUGH'), sg.Button("AMAZING", key='AMAZING'), sg.Button("SAD", key="SAD"), sg.Button('HAPPY', key = 'HAPPY'), sg.Button('MAYBE', key = 'MAYBE'), sg.Button("HOW", key="HOW")],
+    #        [sg.Button("MAD", key='MAD'), sg.Button("SCARED", key='SCARED'), sg.Button("BYE", key="BYE"), sg.Button('SAY NO', key = 'NO'), sg.Button("SLEEPY", key='SLEEPY')]
+    #]
+    
+    #use for low non-verbal
     actions = [
             [sg.Text("PreSet Actions")],
-            [sg.Button("LOVE", key = 'LOVE'), sg.Button("HELLO", key='HELLO'), sg.Button("NOD", key = 'NOD'), sg.Button('SHAKE', key='SHAKE'), sg.Button('SAY YES', key = 'SAY YES'), sg.Button("MEET", key="MEET")],
-            [sg.Button("LAUGH", key = 'LAUGH'), sg.Button("AMAZING", key='AMAZING'), sg.Button("SAD", key="SAD"), sg.Button('HAPPY', key = 'HAPPY'), sg.Button('MAYBE', key = 'MAYBE'), sg.Button("HOW", key="HOW")],
-            [sg.Button("MAD", key='MAD'), sg.Button("SCARED", key='SCARED'), sg.Button("BYE", key="BYE"), sg.Button('SAY NO', key = 'NO'), sg.Button("SLEEPY", key='SLEEPY')]
+            [sg.Button("HELLO", key='HELLO'), sg.Button("NOD", key = 'NOD'), sg.Button("MEET", key="MEET")],
+            [sg.Button('MAYBE', key = 'MAYBE'), sg.Button('SHAKE', key='SHAKE'), sg.Button("HOW", key="HOW")],
+            [sg.Button("BYE", key="BYE"), sg.Button('SAY YES', key = 'SAY YES'), sg.Button('SAY NO', key = 'NO')]
     ]
 
 
