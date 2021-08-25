@@ -285,6 +285,33 @@ def how_are_you():
     time.sleep(2)
     default_action()
 
+def i_am_good():
+    speak("I am good.")
+    time.sleep(2)
+    default_action()
+    
+def tell_more():
+    speak("Please, tell me more.")
+    time.sleep(2)
+    default_action()
+    
+def interesting():
+    speak("Wow, how interesting!")
+    time.sleep(2)
+    default_action()
+    
+def i_dont_know():
+    speak("I don't know, can you tell me more please?")
+    time.sleep(2)
+    default_action()
+
+def see_you():
+    speak("See you next time!")
+    time.sleep(2)
+    default_action()
+    
+
+    
 
 def main():
 
@@ -350,19 +377,29 @@ def main():
     ]
 
     #use for high non-verbal
-    #actions = [
-    #        [sg.Text("PreSet Actions")],
+    actions = [
+    ##        [sg.Text("PreSet Actions")],
     #        [sg.Button("LOVE", key = 'LOVE'), sg.Button("HELLO", key='HELLO'), sg.Button("NOD", key = 'NOD'), sg.Button('SHAKE', key='SHAKE'), sg.Button('SAY YES', key = 'SAY YES'), sg.Button("MEET", key="MEET")],
     #        [sg.Button("LAUGH", key = 'LAUGH'), sg.Button("AMAZING", key='AMAZING'), sg.Button("SAD", key="SAD"), sg.Button('HAPPY', key = 'HAPPY'), sg.Button('MAYBE', key = 'MAYBE'), sg.Button("HOW", key="HOW")],
     #        [sg.Button("MAD", key='MAD'), sg.Button("SCARED", key='SCARED'), sg.Button("BYE", key="BYE"), sg.Button('SAY NO', key = 'NO'), sg.Button("SLEEPY", key='SLEEPY')]
     #]
     
     #use for low non-verbal
+    #actions = [
+    #        [sg.Text("PreSet Actions")],
+    #        [sg.Button("HELLO", key='HELLO'), sg.Button("NOD", key = 'NOD'), sg.Button("MEET", key="MEET")],
+    #        [sg.Button('MAYBE', key = 'MAYBE'), sg.Button('SHAKE', key='SHAKE'), sg.Button("HOW", key="HOW")],
+    #        [sg.Button("BYE", key="BYE"), sg.Button('SAY YES', key = 'SAY YES'), sg.Button('SAY NO', key = 'NO')]
+    #]
+    
+    #use for high verbal 
     actions = [
             [sg.Text("PreSet Actions")],
             [sg.Button("HELLO", key='HELLO'), sg.Button("NOD", key = 'NOD'), sg.Button("MEET", key="MEET")],
             [sg.Button('MAYBE', key = 'MAYBE'), sg.Button('SHAKE', key='SHAKE'), sg.Button("HOW", key="HOW")],
-            [sg.Button("BYE", key="BYE"), sg.Button('SAY YES', key = 'SAY YES'), sg.Button('SAY NO', key = 'NO')]
+            [sg.Button("BYE", key="BYE"), sg.Button('SAY YES', key = 'SAY YES'), sg.Button('SAY NO', key = 'NO')],
+            [sg.Button("GOOD", key="GOOD"), sg.Button("MORE", key = "MORE"), sg.Button("INTERESTING", key = "INTERESTING")],
+            [sg.Button("IDK", key = "IDK"), sg.Button("LATER", key = "LATER")]
     ]
 
 
@@ -427,7 +464,12 @@ def main():
         "SLEEPY" : sleepy_action,
         "HAPPY" : happy_action,
         "MEET" : nice_to_meet,
-        "HOW" : how_are_you
+        "HOW" : how_are_you,
+        "GOOD" : i_am_good,
+        "MORE" : tell_more,
+        "INTERESTING" : interesting,
+        "IDK" : i_dont_know,
+        "LATER" : see_you
 
     }
 
