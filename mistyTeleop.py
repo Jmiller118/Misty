@@ -392,14 +392,16 @@ def main():
     #        [sg.Button("BYE", key="BYE"), sg.Button('SAY YES', key = 'SAY YES'), sg.Button('SAY NO', key = 'NO')]
     #]
     
-    #use for high verbal 
+    #use for high verbal & nonverbal
     actions = [
             [sg.Text("PreSet Actions")],
             [sg.Button("HELLO", key='HELLO'), sg.Button("NOD", key = 'NOD'), sg.Button("MEET", key="MEET")],
             [sg.Button('MAYBE', key = 'MAYBE'), sg.Button('SHAKE', key='SHAKE'), sg.Button("HOW", key="HOW")],
             [sg.Button("BYE", key="BYE"), sg.Button('SAY YES', key = 'SAY YES'), sg.Button('SAY NO', key = 'NO')],
             [sg.Button("GOOD", key="GOOD"), sg.Button("MORE", key = "MORE"), sg.Button("INTERESTING", key = "INTERESTING")],
-            [sg.Button("IDK", key = "IDK"), sg.Button("LATER", key = "LATER")]
+            [sg.Button("IDK", key = "IDK"), sg.Button("LATER", key = "LATER"), sg.Button('HAPPY', key = 'HAPPY')],
+            [sg.Button("LAUGH", key = 'LAUGH'), sg.Button("AMAZING", key='AMAZING'), sg.Button("SAD", key="SAD")],
+            [sg.Button("MAD", key='MAD'), sg.Button("SCARED", key='SCARED'), [sg.Button("LOVE", key = 'LOVE')]
     ]
 
 
